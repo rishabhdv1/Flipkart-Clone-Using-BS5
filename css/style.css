@@ -2,7 +2,7 @@
     border: 1px dashed red;
 }
 header{
-    height: 85px;
+    /* height: 75px; */
     background: #fff;
 }
 .r_header-nav > li:first-child > a:hover{
@@ -42,4 +42,29 @@ header{
 }
 .r_header-nav3 > li:hover{
     background: #FAFAFA;
+}
+
+/* ------ carousel -------- */
+.r_car_ind > button{
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 100%;
+}
+.r_car-btn{
+    width: 3%;
+    height: 100px;
+    margin: 5% 0;
+    opacity: 1;
+    background: #fff;
+}
+.r_car-btn i{
+    color: #878787;
+}
+#carouselExampleRide .carousel-control-prev{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#carouselExampleRide .carousel-control-next{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
