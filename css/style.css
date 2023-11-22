@@ -43,6 +43,58 @@ header{
 .r_header-nav3 > li:hover{
     background: #FAFAFA;
 }
+.r_header-bul:hover .r_btn{
+    background: #fafafa;
+}
+/* --------- main-top-ul ------------ */
+.r_mt-ul1{
+    position: absolute;
+    display: none;
+}
+.main_top > ul >li:nth-child(3):hover .r_mt-ul1{
+    display: block;
+    background: #fff;
+    z-index: 1;
+}
+.r_mt-ul2{
+    display: none;
+    position: absolute;
+}
+.main_top > ul >li:nth-child(4):hover .r_mt-ul2{
+    display: block;
+    background: #fff;
+    z-index: 1;
+}
+.r_mt-ul3{
+    display: none;
+    position: absolute;
+}
+.main_top > ul >li:nth-child(5):hover .r_mt-ul3{
+    display: block;
+    background: #fff;
+    z-index: 1;
+}
+.r_mt-ul4{
+    display: none;
+    position: absolute;
+}
+.main_top > ul >li:nth-child(8):hover .r_mt-ul4{
+    display: block;
+    background: #fff;
+    z-index: 1;
+}
+.r_mt-ul5{
+    display: none;
+    position: absolute;
+}
+.main_top > ul >li:last-child:hover .r_mt-ul5{
+    display: block;
+    background: #fff;
+    z-index: 1;
+}
+.r_mt-ul > li > a:hover{
+    background: #F0F5FF;
+}
 
 /* ------ carousel -------- */
 .r_car_ind > button{

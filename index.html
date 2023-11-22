@@ -64,6 +64,15 @@
             .cbox .row{
 
             }
+            .r_search-history{
+                position: absolute;
+                top: 40px;
+                display: none;
+            }
+            .r_search-history-tab:focus + ul{
+                display: block;
+            }
+
         </style>
     </head>
     <body>
@@ -73,12 +82,27 @@
                     <img class="img-fluid ps-5" src="img/header_logo.svg" alt="">
                 </div>
                 <div class="col-6 p-0">
-                        <div class="d-flex border rounded-3" style="background: #F0F5FF;">
-                            <button class="btn btn-lg p-1">
+                        <div class="d-flex border rounded-3 position-relative" style="background: #F0F5FF;">
+                            <button class="btn btn-lg p-1 ps-2">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input style="background: #F0F5FF;" class="form-control shadow-none w-100 p-2 border-0 outline-0" type="text" name="" id="" placeholder="Search for Products, Brands and More">
+                            <input style="background: #F0F5FF;" class="form-control shadow-none w-100 p-2 border-0 outline-0 r_search-history-tab" type="text" placeholder="Search for Products, Brands and More">
+                            <ul class="nav flex-column bg-white r_bx w-100 position-absolute r_search-history">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img class="img-fluid" width="40" src="img/Search_time.png" alt=""> Mobile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img class="img-fluid" width="40" src="img/Search_time.png" alt=""> PC's</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img class="img-fluid" width="40" src="img/Search_time.png" alt=""> Accessories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><img class="img-fluid" width="40" src="img/Search_time.png" alt=""> Headphones</a>
+                                </li>
+                            </ul>
                         </div>
+                        
                 </div>
                 <div class="col-4 p-0">
                     <ul class="nav r_header-nav">
@@ -121,8 +145,8 @@
                             <a href="#" class="nav-link">
                                 <img src="img/become_a_seller.svg" alt="">Become a Seller</a>
                         </li>
-                        <li class="nav-item ps-2 position-relative">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item ps-2 position-relative r_header-bul">
+                            <a href="#" class="nav-link r_btn btn btn-danger">
                                 <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" alt="">
                             </a>
                             <ul class="nav flex-column position-absolute r_header-nav3">
@@ -165,18 +189,138 @@
                                 <img src="img/fashion.png" alt="">
                                 <span class="d-block">Fashion <i class="fa fa-chevron-down"></i></span>
                             </a>
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul1">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Men's Top Wear <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Men's Bottom Wear <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Women Ethnic <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Women Western <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Men Footwear <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Women Footwear <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Watches and Accessories <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Bags, Suitcases &amp; Luggage <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Kids <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Essentials <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Winter <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <img src="img/electronic.png" alt="">
                                 <span class="d-block">Electronics <i class="fa fa-chevron-down"></i></span>
                             </a>
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul2">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Audio <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Electronics GST Store <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Cameras and Accessories <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Computer Peripherals <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Gaming <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Health &amp; personal Care <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Laptop Accessories <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Laptop &amp; Desktop <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Mobile Accessory <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Powerbank <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Smart Home automation <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Smart Wearables <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Storage <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Tablets <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <img src="img/furniture.webp" alt="">
                                 <span class="d-block">Home &amp; Furniture <i class="fa fa-chevron-down"></i></span>
                             </a>
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul3">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Home Furnishings <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Furniture Studio <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Living Room Furniture <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Kitchen &amp; Dining <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Bedroom Furniture <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Space Saving Furniture <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Home Decor <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Tools &amp; Utility <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Work Space Furniture <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Kids Furniture <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Lightings &amp; Electicals <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Cleaning &amp; Bath <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Pet &amp; Gardening <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -195,12 +339,58 @@
                                 <img src="img/toys.png" alt="">
                                 <span class="d-block">Beauty, Toys &amp; More <i class="fa fa-chevron-down"></i></span>
                             </a>
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul4">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Beauty &amp; Personal Care <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Men's Grooming <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Food &amp; Drinks <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Nutrition &amp; Health Care <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Baby Care <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Toys &amp; School Supplies <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Sports &amp; Fitness <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Books <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Music <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Stationery &amp; Office Supplies <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Auto Accessories <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Safety &amp; Hygine Essentials <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <img src="img/bike.png" alt="">
                                 <span class="d-block">Two Wheelers <i class="fa fa-chevron-down"></i></span>
                             </a>
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul5">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">Petrol Vehicles <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Electric Vehicles <i class="fa fa-chevron-right float-end"></i></a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -257,7 +447,7 @@
                     </div>
                 </div>
                 <div class="m1 mb-3 r_bx">
-                    <div class="row m-0 r_tbdr">
+                    <div class="row m-0">
                         <div class="col-md-10 p-0 bg-white">
                             <div class="m1_c10_top">
                                 <h5 class="fw-bold float-start">Best of Electronics</h5>
@@ -271,12 +461,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">1</div>
+                                                <div class="col h-100 r_tbdr">2</div>
+                                                <div class="col h-100 r_tbdr">3</div>
+                                                <div class="col h-100 r_tbdr">4</div>
+                                                <div class="col h-100 r_tbdr">5</div>
+                                                <div class="col h-100 r_tbdr">6</div>
                                             </div>
                                         </div>
                                     </a>
@@ -285,12 +475,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">7</div>
+                                                <div class="col h-100 r_tbdr">8</div>
+                                                <div class="col h-100 r_tbdr">9</div>
+                                                <div class="col h-100 r_tbdr">10</div>
+                                                <div class="col h-100 r_tbdr">11</div>
+                                                <div class="col h-100 r_tbdr">12</div>
                                             </div>
                                         </div>
                                     </a>
@@ -299,12 +489,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">13</div>
+                                                <div class="col h-100 r_tbdr">14</div>
+                                                <div class="col h-100 r_tbdr">15</div>
+                                                <div class="col h-100 r_tbdr">16</div>
+                                                <div class="col h-100 r_tbdr">17</div>
+                                                <div class="col h-100 r_tbdr">18</div>
                                             </div>
                                         </div>
                                     </a>
@@ -313,12 +503,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">19</div>
+                                                <div class="col h-100 r_tbdr">20</div>
+                                                <div class="col h-100 r_tbdr">21</div>
+                                                <div class="col h-100 r_tbdr">22</div>
+                                                <div class="col h-100 r_tbdr">23</div>
+                                                <div class="col h-100 r_tbdr">24</div>
                                             </div>
                                         </div>
                                     </a>
@@ -327,12 +517,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">25</div>
+                                                <div class="col h-100 r_tbdr">26</div>
+                                                <div class="col h-100 r_tbdr">27</div>
+                                                <div class="col h-100 r_tbdr">28</div>
+                                                <div class="col h-100 r_tbdr">29</div>
+                                                <div class="col h-100 r_tbdr">30</div>
                                             </div>
                                         </div>
                                     </a>
@@ -341,12 +531,12 @@
                                     <a href="#">
                                         <div class="cbox">
                                             <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">A</div>
-                                                <div class="col h-100 r_tbdr">B</div>
-                                                <div class="col h-100 r_tbdr">C</div>
-                                                <div class="col h-100 r_tbdr">D</div>
-                                                <div class="col h-100 r_tbdr">E</div>
-                                                <div class="col h-100 r_tbdr">F</div>
+                                                <div class="col h-100 r_tbdr">31</div>
+                                                <div class="col h-100 r_tbdr">32</div>
+                                                <div class="col h-100 r_tbdr">33</div>
+                                                <div class="col h-100 r_tbdr">34</div>
+                                                <div class="col h-100 r_tbdr">35</div>
+                                                <div class="col h-100 r_tbdr">36</div>
                                             </div>
                                         </div>
                                     </a>
@@ -370,14 +560,32 @@
                     </div>
                 </div>
                 <div class="m2 bg-white mb-3 r_tbdr">
-                    <h5>Beauty, Food, Toys &amp; more</h5>
+                    <div class="m1_c10_top">
+                        <h5 class="fw-bold float-start">Beauty, Food, Toys &amp; more</h5>
+                        <a href="#" class="float-end">
+                            <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                        </a>
+                    </div>
+                    <div class="r_tbdr"></div>
                 </div>
                 <div class="m3 bg-white mb-3 r_tbdr">
-                    <h5>Sports, Healthcare & more</h5>
+                    <div class="m1_c10_top">
+                        <h5 class="fw-bold float-start">Sports, Healthcare & more</h5>
+                        <a href="#" class="float-end">
+                            <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                        </a>
+                    </div>
+                    <div class="r_tbdr"></div>
                 </div>
                 <div class="m4 r_tbdr mb-3"></div>
                 <div class="m5 bg-white mb-3">
-                    <h5>Home &amp; Kitchen Essentials</h5>
+                    <div class="m1_c10_top">
+                        <h5 class="fw-bold float-start">Home &amp; Kitchen Essentials</h5>
+                        <a href="#" class="float-end">
+                            <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                        </a>
+                    </div>
+                    <div class="r_tbdr"></div>
                 </div>
                 <div class="m6 r_tbdr mb-3"></div>
             </main>
