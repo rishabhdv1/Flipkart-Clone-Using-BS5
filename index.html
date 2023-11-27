@@ -13,16 +13,17 @@
                 background: #f1f2f4;
                 font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;
             }
-            ul > li > a{
+            header a , main a{
+                text-decoration: none;
                 color: #000 !important;
             }
             .r_cont{
-                height: 10233px; /* 10631px */
+                /* height: 10233px; */
             }
             
             main{
                 margin-top: 90px;
-                height: 10143px; /* 7244px */
+                /* height: 10143px; */
             }
             .main_top > ul > li > a{
                 text-align: center;
@@ -31,63 +32,86 @@
                 box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 
             }
-            .m1{
-                /* height: 435px; */
+            .m1 > .row > .col-md-10 img{
+                width: 185px;
+                height: 185px;
             }
+            .m2 img , .m3 img , .m5 img , .m7 img{
+                width: 185px;
+                height: 185px;
+            }
+            .m4 img{
+                width: 223px;
+                height: 223px;
+            }
+
             .m1_c10_top{
                 height: 75px;
                 padding: 25px;
             }
             .cbox{
                 height: 300px;
-                border: 1px dashed red;
             }
-            .m2{
-                height: 430px;
+            
+            .r_nav-electro > li > a{
+                width: 200px;
             }
-            .m3{
-                height: 430px;
+            .r_hover img:hover{
+                transform: scale(1.05,1.05);
             }
-            .m4{
-                height: 852px;
+            a i.fa-solid{
+                color: #0D6EFD !important;
             }
-            .m5{
-                height: 430px;
+            .carousel-control-prev{
+                border-top-right-radius: 5px;
+                border-Bottom-right-radius: 5px;
             }
-            .m6{
-                height: 850px;
+            .carousel-control-next{
+                border-top-left-radius: 5px;
+                border-Bottom-left-radius: 5px;
             }
+
             footer{
-                height: 403px; /* 3302px */
                 background: #212121;
+                font-size: 12px;
             }
-            .cbox .row{
-
+            .footer_top{
+                height: 315px; /* 259px */
+                border-bottom: 1px solid #454d5e;
             }
-            .r_search-history{
-                position: absolute;
-                top: 40px;
-                display: none;
+            .footer_bottom{
+                height: 85px; /* 72px */
             }
-            .r_search-history-tab:focus + ul{
-                display: block;
+            .footer_top a , .footer_top{
+                padding: 0px;
+                font-weight: 600;
+                /* padding-left: 0; */
             }
-
+            .footer_top p{
+                padding: 0;
+                margin: 0;
+            }
+            .footer_top a:hover{
+                text-decoration: underline ;
+            }
+            .footer_top .col-md-7 a{
+                color: #fff;
+            }
         </style>
     </head>
     <body>
         <header class="fixed-top p-3">
             <div class="row m-0">
                 <div class="col-2 p-0">
-                    <img class="img-fluid ps-5" src="img/header_logo.svg" alt="">
+                    <img onclick="refreshPage()" class="img-fluid ps-5" src="img/header_logo.svg" alt="">   
                 </div>
                 <div class="col-6 p-0">
                         <div class="d-flex border rounded-3 position-relative" style="background: #F0F5FF;">
                             <button class="btn btn-lg p-1 ps-2">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input style="background: #F0F5FF;" class="form-control shadow-none w-100 p-2 border-0 outline-0 r_search-history-tab" type="text" placeholder="Search for Products, Brands and More">
-                            <ul class="nav flex-column bg-white r_bx w-100 position-absolute r_search-history">
+                            <input style="background: #F0F5FF;" class="form-control shadow-none w-100 p-2 border-0 outline-0 r_search-list-tab" type="text" placeholder="Search for Products, Brands and More">
+                            <ul class="nav flex-column bg-white r_bx w-100 position-absolute r_search-list">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link"><img class="img-fluid" width="40" src="img/Search_time.png" alt=""> Mobile</a>
                                 </li>
@@ -168,7 +192,7 @@
                 </div>
             </div>
         </header>
-        <div class="container-fluid r_cont r_tbdr">
+        <div class="container-fluid r_cont">
             <main class="">
                 <div class="main_top p-2 bg-white mb-3 r_bx">
                     <ul class="nav d-flex justify-content-center">
@@ -185,11 +209,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link position-relative">
                                 <img src="img/fashion.png" alt="">
                                 <span class="d-block">Fashion <i class="fa fa-chevron-down"></i></span>
                             </a>
-                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul1">
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul1 position-absolute">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Men's Top Wear <i class="fa fa-chevron-right float-end"></i></a>
                                 </li>
@@ -226,11 +250,11 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link position-relative">
                                 <img src="img/electronic.png" alt="">
                                 <span class="d-block">Electronics <i class="fa fa-chevron-down"></i></span>
                             </a>
-                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul2">
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul2 position-absolute">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Audio <i class="fa fa-chevron-right float-end"></i></a>
                                 </li>
@@ -276,11 +300,11 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link position-relative">
                                 <img src="img/furniture.webp" alt="">
                                 <span class="d-block">Home &amp; Furniture <i class="fa fa-chevron-down"></i></span>
                             </a>
-                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul3">
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul3 position-absolute">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Home Furnishings <i class="fa fa-chevron-right float-end"></i></a>
                                 </li>
@@ -335,11 +359,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link position-relative">
                                 <img src="img/toys.png" alt="">
                                 <span class="d-block">Beauty, Toys &amp; More <i class="fa fa-chevron-down"></i></span>
                             </a>
-                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul4">
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul4 position-absolute">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Beauty &amp; Personal Care <i class="fa fa-chevron-right float-end"></i></a>
                                 </li>
@@ -379,11 +403,11 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link position-relative">
                                 <img src="img/bike.png" alt="">
                                 <span class="d-block">Two Wheelers <i class="fa fa-chevron-down"></i></span>
                             </a>
-                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul5">
+                            <ul class="nav flex-column r_bx r_mt-ul r_mt-ul5 position-absolute">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">Petrol Vehicles <i class="fa fa-chevron-right float-end"></i></a>
                                 </li>
@@ -394,7 +418,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mb-3">
+                <div class="r_caro mb-3">
                     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators r_car_ind">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -446,6 +470,7 @@
                         </button>
                     </div>
                 </div>
+                
                 <div class="m1 mb-3 r_bx">
                     <div class="row m-0">
                         <div class="col-md-10 p-0 bg-white">
@@ -458,88 +483,148 @@
                             <div id="carouselExampleRide2" class="carousel slide" >
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">1</div>
-                                                <div class="col h-100 r_tbdr">2</div>
-                                                <div class="col h-100 r_tbdr">3</div>
-                                                <div class="col h-100 r_tbdr">4</div>
-                                                <div class="col h-100 r_tbdr">5</div>
-                                                <div class="col h-100 r_tbdr">6</div>
+                                    <div class="cbox">
+                                        <div class="row m-0 h-100">
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                        <div>
+                                                            <p class="pt-3">Top Mirrorless Cameras</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Pendrives and SD cards</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Printers</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Quantum</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Powerbanks</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Printers</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                   </div>
                                   <div class="carousel-item">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">7</div>
-                                                <div class="col h-100 r_tbdr">8</div>
-                                                <div class="col h-100 r_tbdr">9</div>
-                                                <div class="col h-100 r_tbdr">10</div>
-                                                <div class="col h-100 r_tbdr">11</div>
-                                                <div class="col h-100 r_tbdr">12</div>
+                                    <div class="cbox">
+                                        <div class="row m-0 h-100">
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                        <div>
+                                                            <p class="pt-3">Top Mirrorless Cameras</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Pendrives and SD cards</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Printers</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Quantum</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Powerbanks</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col h-100 p-2">
+                                                <div class="border text-center p-2 h-100">
+                                                    <a href="#" class="r_hover">
+                                                        <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                        <div class="pt-3">
+                                                            <p>Printers</p>
+                                                            <strong>Shop Now!</strong>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </a>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">13</div>
-                                                <div class="col h-100 r_tbdr">14</div>
-                                                <div class="col h-100 r_tbdr">15</div>
-                                                <div class="col h-100 r_tbdr">16</div>
-                                                <div class="col h-100 r_tbdr">17</div>
-                                                <div class="col h-100 r_tbdr">18</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">19</div>
-                                                <div class="col h-100 r_tbdr">20</div>
-                                                <div class="col h-100 r_tbdr">21</div>
-                                                <div class="col h-100 r_tbdr">22</div>
-                                                <div class="col h-100 r_tbdr">23</div>
-                                                <div class="col h-100 r_tbdr">24</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">25</div>
-                                                <div class="col h-100 r_tbdr">26</div>
-                                                <div class="col h-100 r_tbdr">27</div>
-                                                <div class="col h-100 r_tbdr">28</div>
-                                                <div class="col h-100 r_tbdr">29</div>
-                                                <div class="col h-100 r_tbdr">30</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <a href="#">
-                                        <div class="cbox">
-                                            <div class="row m-0 h-100">
-                                                <div class="col h-100 r_tbdr">31</div>
-                                                <div class="col h-100 r_tbdr">32</div>
-                                                <div class="col h-100 r_tbdr">33</div>
-                                                <div class="col h-100 r_tbdr">34</div>
-                                                <div class="col h-100 r_tbdr">35</div>
-                                                <div class="col h-100 r_tbdr">36</div>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    </div>
                                   </div>
                                 </div>
                                 <button class="carousel-control-prev r_car-btn" type="button" data-bs-target="#carouselExampleRide2" data-bs-slide="prev">
@@ -559,25 +644,507 @@
                         </div>
                     </div>
                 </div>
-                <div class="m2 bg-white mb-3 r_tbdr">
+                
+                <div class="m2 bg-white mb-3 r_bx">
                     <div class="m1_c10_top">
                         <h5 class="fw-bold float-start">Beauty, Food, Toys &amp; more</h5>
                         <a href="#" class="float-end">
                             <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
                         </a>
                     </div>
-                    <div class="r_tbdr"></div>
+                    <div id="carouselExampleRide3" class="carousel slide" >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_m1_left-a">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        <button class="carousel-control-prev r_car-btn" type="button" data-bs-target="#carouselExampleRide3" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next r_car-btn" type="button" data-bs-target="#carouselExampleRide3" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="m3 bg-white mb-3 r_tbdr">
+                <div class="m3 bg-white mb-3 r_bx">
                     <div class="m1_c10_top">
                         <h5 class="fw-bold float-start">Sports, Healthcare & more</h5>
                         <a href="#" class="float-end">
                             <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
                         </a>
                     </div>
-                    <div class="r_tbdr"></div>
+                    <div id="carouselExampleRide4" class="carousel slide" >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_m1_left-a">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        <button class="carousel-control-prev r_car-btn" type="button" data-bs-target="#carouselExampleRide4" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next r_car-btn" type="button" data-bs-target="#carouselExampleRide4" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="m4 r_tbdr mb-3"></div>
+                <div class="m4 mb-3">
+                    <div class="row m-0">
+                        <div class="col p-0 p-2">
+                            <div class="m4-1 bg-white mb-3 r_bx">
+                                <div class="m1_c10_top">
+                                    <h5 class="fw-bold float-start">Sports, Healthcare & more</h5>
+                                    <a href="#" class="float-end">
+                                        <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="row m-0 p-2">
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/mufflers.jpeg" alt="">
+                                                <p>Men's Mufflers</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/sport_shoes.jpeg" alt="">
+                                                <p>Men's Sport Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/casual_shoes.jpeg" alt="">
+                                                <p>Men's Casual Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/tracksuit.jpeg" alt="">
+                                                <p>Men's Tracksuits</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-0 p-2">
+                            <div class="m4-2 bg-white mb-3 r_bx">
+                                <div class="m1_c10_top">
+                                    <h5 class="fw-bold float-start">New Year Specials</h5>
+                                    <a href="#" class="float-end">
+                                        <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="row m-0 p-2">
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/watches.jpeg" alt="">
+                                                <p>Wrist Watches</p>
+                                                <strong class="text-success">Min. 90% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid p-4" src="img/m4/tshirts.jpeg" alt="">
+                                                <p>Men's T-shirts</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/sports_shoes2.jpeg" alt="">
+                                                <p>Men's Sports Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/casual_shoes2.jpeg" alt="">
+                                                <p>Men's Casual Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-0 p-2">
+                            <div class="m4-3 bg-white mb-3 r_bx">
+                                <div class="m1_c10_top">
+                                    <h5 class="fw-bold float-start">Travel Essentials</h5>
+                                    <a href="#" class="float-end">
+                                        <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="row m-0 p-2">
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/sleeves.jpeg" alt="">
+                                                <p>Arm Sleeves</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/toothpaste.jpeg" alt="">
+                                                <p>Toothpaste</p>
+                                                <strong class="text-success">Min. 20% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/shavers.jpeg" alt="">
+                                                <p>Shavers</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/gloves.jpeg" alt="">
+                                                <p>Riding Gloves</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="m5 bg-white mb-3">
                     <div class="m1_c10_top">
                         <h5 class="fw-bold float-start">Home &amp; Kitchen Essentials</h5>
@@ -585,15 +1152,613 @@
                             <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
                         </a>
                     </div>
-                    <div class="r_tbdr"></div>
+                    <div id="carouselExampleRide5" class="carousel slide" >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_hover">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        <button class="carousel-control-prev r_car-btn" type="button" data-bs-target="#carouselExampleRide5" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next r_car-btn" type="button" data-bs-target="#carouselExampleRide5" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="m6 r_tbdr mb-3"></div>
+                <div class="m6 mb-3">
+                    <div class="row m-0">
+                        <div class="col p-0 p-2">
+                            <div class="m3 bg-white mb-3 r_bx">
+                                <div class="m1_c10_top">
+                                    <h5 class="fw-bold float-start">Sports, Healthcare & more</h5>
+                                    <a href="#" class="float-end">
+                                        <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="row m-0 p-2">
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/mufflers.jpeg" alt="">
+                                                <p>Men's Mufflers</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/sport_shoes.jpeg" alt="">
+                                                <p>Men's Sport Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/casual_shoes.jpeg" alt="">
+                                                <p>Men's Casual Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/tracksuit.jpeg" alt="">
+                                                <p>Men's Tracksuits</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-0 p-2">
+                            <div class="m3 bg-white mb-3 r_bx">
+                                <div class="m1_c10_top">
+                                    <h5 class="fw-bold float-start">New Year Specials</h5>
+                                    <a href="#" class="float-end">
+                                        <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                                    </a>
+                                </div>
+                                <div class="row m-0 p-2">
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/watches.jpeg" alt="">
+                                                <p>Wrist Watches</p>
+                                                <strong class="text-success">Min. 90% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid p-4" src="img/m4/tshirts.jpeg" alt="">
+                                                <p>Men's T-shirts</p>
+                                                <strong class="text-success">Min. 50% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/sports_shoes2.jpeg" alt="">
+                                                <p>Men's Sports Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 p-1">
+                                      <div class="card">
+                                        <div class="card-body">
+                                            <a href="#">
+                                                <img class="img-fluid" src="img/m4/casual_shoes2.jpeg" alt="">
+                                                <p>Men's Casual Shoes</p>
+                                                <strong class="text-success">Min. 70% Off</strong>
+                                            </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-0 p-2">
+                            <div class="mb-3 r_bx">
+                                <a href="#">
+                                <img class="img-fluid w-100" style="height: 670px;" src="img/m6/right.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m7 bg-white mb-3 r_bx">
+                    <div class="m1_c10_top">
+                        <h5 class="fw-bold float-start">Grooming, Books, Auto &amp; more</h5>
+                        <a href="#" class="float-end">
+                            <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                        </a>
+                    </div>
+                    <div id="carouselExampleRide6" class="carousel slide" >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_m1_left-a">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="cbox">
+                                  <div class="row m-0 h-100">
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#" class="r_m1_left-a">
+                                                  <img class="img-fluid" src="./img/electro/canon.jpeg" alt="">
+                                                  <div>
+                                                      <p class="pt-3">Top Mirrorless Cameras</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/sandisk.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Pendrives and SD cards</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/printer.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/quantum.webp" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Quantum</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/powerbank.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Powerbanks</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="col h-100 p-2">
+                                          <div class="border text-center p-2 h-100">
+                                              <a href="#">
+                                                  <img class="img-fluid" src="./img/electro/printer2.jpeg" alt="">
+                                                  <div class="pt-3">
+                                                      <p>Printers</p>
+                                                      <strong>Shop Now!</strong>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        <button class="carousel-control-prev r_car-btn" type="button" data-bs-target="#carouselExampleRide6" data-bs-slide="prev">
+                          <i class="fa fa-chevron-left"></i>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next r_car-btn" type="button" data-bs-target="#carouselExampleRide6" data-bs-slide="next">
+                          <i class="fa fa-chevron-right"></i>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </main>
         </div>
         <footer>
-            footer
+            <div class="footer_top p-5">
+                <div class="row m-0">
+                    <div class="col-md-7 p-0">
+                        <div class="row m-0">
+                            <div class="col p-0">
+                                <p class="text-secondary pb-3">ABOUT</p>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Carrers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Flipkart Stories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Press</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Flipkart Wholesale</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Cleartrip</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Corporate information</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col p-0">
+                                <p class="text-secondary pb-3">HELP</p>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Payments</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Shipping</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Cancelation &amp; Returns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">FAQ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Report Infringement</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col p-0">
+                                <p class="text-secondary pb-3">Consumer Policy</p>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Cancelation &amp; Returns</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Terms of use</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Security</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Privacy</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Sitemap</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Grievance Redressal</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">EPR Compliance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col p-0">
+                                <p class="text-secondary pb-3">Social</p>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Facebook</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Twitter</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Youtube</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 p-0">
+                        <div class="row m-0">
+                            <div class="col p-0 text-white">
+                                <p class="text-secondary pb-3">Mail Us:</p>
+                                <p>Flipkart Internet Private Limited, </p>
+                                <p> Buildings Alyssa, Begonia &amp; </p>
+                                <p> Clove Embassy Tech Village, </p>
+                                <p> Outer Ring Road, Devarabeesanahalli Village, </p>
+                                <p> Bengaluru, 560103, </p>
+                                <p> Karnataka, India</p>
+                            </div>
+                            <div class="col p-0 text-white">
+                                <p class="text-secondary pb-3">Registered Office Address:</p>
+                                <p>Flipkart Internet Private Limited, </p>
+                                <p> Buildings Alyssa, Begonia & </p>
+                                <p> Clove Embassy Tech Village, </p>
+                                <p> Outer Ring Road, Devarabeesanahalli Village, </p>
+                                <p> Bengaluru, 560103, </p>
+                                <p> Karnataka, India </p>
+                                <p> CIN : U51109KA2012PTC066107 </p>
+                                <p>
+                                    Telephone:
+                                    <a href="#tel:044-45614700">044-45614700</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="row m-0 p-4">
+                    <div class="col-6 p-0">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white"><img src="img/footer/become_seller.svg" alt="">Become a Seller</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white"><img src="img/footer/advertise.svg" alt="">Advertise</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white"><img src="img/footer/gift_cards.svg" alt="">Gift Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white"><img src="img/footer/help_center.svg" alt="">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 p-0">
+                        <span class="text-white">© 2007-2023 Flipkart.com</span>
+                    </div>
+                    <div class="col-4 p-0">
+                        <img class="img-fluid ms-5 ps-5" src="img/footer/links.svg" alt="">
+                    </div>
+                </div>
+            </div>
         </footer>
 
+
+        <script>
+            // JavaScript function to refresh the page
+            function refreshPage() {
+                // Use the location.reload() method to reload the current page
+                location.reload();
+            }
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>

@@ -5,8 +5,10 @@ header{
     /* height: 75px; */
     background: #fff;
 }
-.r_header-nav > li:first-child > a:hover{
+.r_header-nav > li:first-child:hover > a{
+    display: block;
     background: #2A55E5;
+    color: #fff !important;
 }
 .r_header-nav > li:first-child:hover .r_header-nav2{
     display: block;
@@ -46,51 +48,56 @@ header{
 .r_header-bul:hover .r_btn{
     background: #fafafa;
 }
+.r_search-list{
+    position: absolute;
+    top: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+.r_search-list-tab:focus + ul{
+    display: block;
+}
 /* --------- main-top-ul ------------ */
 .r_mt-ul1{
-    position: absolute;
     display: none;
 }
 .main_top > ul >li:nth-child(3):hover .r_mt-ul1{
     display: block;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .r_mt-ul2{
     display: none;
-    position: absolute;
 }
 .main_top > ul >li:nth-child(4):hover .r_mt-ul2{
     display: block;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .r_mt-ul3{
     display: none;
-    position: absolute;
 }
 .main_top > ul >li:nth-child(5):hover .r_mt-ul3{
     display: block;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .r_mt-ul4{
     display: none;
-    position: absolute;
 }
 .main_top > ul >li:nth-child(8):hover .r_mt-ul4{
     display: block;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .r_mt-ul5{
     display: none;
-    position: absolute;
 }
 .main_top > ul >li:last-child:hover .r_mt-ul5{
     display: block;
     background: #fff;
-    z-index: 1;
+    z-index: 1000;
 }
 .r_mt-ul > li > a:hover{
     background: #F0F5FF;
